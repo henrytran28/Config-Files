@@ -17,6 +17,8 @@ Plugin 'junegunn/seoul256.vim'
 
 Plugin 'valloric/youcompleteme'
 
+Plugin 'scrooloose/nerdcommenter'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -37,7 +39,7 @@ let g:seoul256_background = 236
 colo seoul256 
 
 set tabstop=4
-set softtabstop=0
+set softtabstop=4
 set expandtab
 set shiftwidth=4
 set autoindent
@@ -51,3 +53,5 @@ imap jk <Esc>
 
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
+
+hi Normal ctermbg=none
