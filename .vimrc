@@ -20,6 +20,8 @@ Plugin 'valloric/youcompleteme'
 
 Plugin 'scrooloose/nerdcommenter'
 
+Plugin 'vimwiki/vimwiki'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -37,6 +39,7 @@ filetype plugin indent on    " required
 
 set number
 colo seoul256
+
 set tabstop=4
 set softtabstop=4
 set expandtab
@@ -52,3 +55,6 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 
 hi Normal ctermbg=none
+
+let mapleader=","
+

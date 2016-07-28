@@ -1,3 +1,4 @@
+set nocompatible
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
@@ -19,6 +20,8 @@ Plugin 'valloric/youcompleteme'
 
 Plugin 'scrooloose/nerdcommenter'
 
+Plugin 'vimwiki/vimwiki'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -35,7 +38,6 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 set number
-let g:seoul256_background = 236
 colo seoul256 
 
 set tabstop=4
@@ -46,12 +48,12 @@ set autoindent
 set smartindent
 
 syntax on
-
 map <C-n> :NERDTreeToggle<CR>
 imap jk <Esc>
-
 
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 
 hi Normal ctermbg=none
+
+let mapleader=","
