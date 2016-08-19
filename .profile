@@ -16,8 +16,6 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
-. "~/.config/seoul256-gnome-terminal/seoul256-dark.sh"
-
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
     PATH="/home/hetran/dcm4chee_tools/dcm4che-3.3.7/bin:$HOME/bin:$PATH"
