@@ -26,6 +26,9 @@ Plugin 'bling/vim-airline'
 
 Plugin 'vim-airline/vim-airline-themes'
 
+Plugin 'ntpeters/vim-better-whitespace'
+
+Plugin 'mileszs/ack.vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -43,9 +46,9 @@ filetype plugin indent on    " required
 
 "Colour
 colo seoul256
+set t_Co=256
 
-" Tabbing and indenting
-set tabstop=4
+" Tabbing and indenting set tabstop=4
 set softtabstop=4
 set expandtab
 set shiftwidth=4
@@ -54,25 +57,18 @@ set smartindent
 
 set number
 syntax on
+hi Normal ctermbg=none
 
 " Useful shortcuts
-map <C-n> :NERDTreeToggle<CR> 
+map <C-n> :NERDTreeToggle<CR>
 set pastetoggle=<leader>p
 imap jk <Esc>
 let mapleader=","
 
+" YouCompleteMe
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 
+" Vim Airline
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
-
-if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
-endif
-let g:airline_symbols.space = "\ua0"
-
-
-" Transparent bg
-hi Normal ctermbg=none
-
+let g:airline_theme='base16'

@@ -38,7 +38,7 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 set number
-colo seoul256 
+colo seoul256
 
 set tabstop=4
 set softtabstop=4
