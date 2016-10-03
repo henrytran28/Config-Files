@@ -71,4 +71,6 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 
 " Vim Airline
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='base16'
+let g:airline_theme='bubblegum'
+let g:airline_left_sep=''
+let g:airline_right_sep=''
