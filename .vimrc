@@ -60,10 +60,10 @@ syntax on
 hi Normal ctermbg=none
 
 " Useful shortcuts
+let mapleader=","
 map <C-n> :NERDTreeToggle<CR>
 set pastetoggle=<leader>p
 imap jk <Esc>
-let mapleader=","
 
 " YouCompleteMe
 let g:ycm_autoclose_preview_window_after_completion = 1
