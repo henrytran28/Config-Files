@@ -61,6 +61,7 @@ hi Normal ctermbg=none
 let mapleader=","
 map <C-n> :NERDTreeToggle<CR>
 set pastetoggle=<leader>p
+map <leader>sw :StripWhitespace<CR>
 imap jk <Esc>
 
 " YouCompleteMe
@@ -72,3 +73,6 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='bubblegum'
 let g:airline_left_sep=''
 let g:airline_right_sep=''
+
+" Better WhiteSpace
+highlight ExtraWhitespace ctermbg=114
