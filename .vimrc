@@ -52,6 +52,7 @@ set expandtab
 set shiftwidth=4
 set autoindent
 set smartindent
+filetype indent on
 
 set number
 syntax on
