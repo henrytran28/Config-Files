@@ -77,3 +77,6 @@ let g:airline_right_sep=''
 
 " Better WhiteSpace
 highlight ExtraWhitespace ctermbg=114
+
+" Nerdcommenter
+let NERDSpaceDelims=1
