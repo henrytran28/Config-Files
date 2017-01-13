@@ -56,6 +56,7 @@ set autoindent
 set smartindent
 filetype indent on
 
+set hlsearch
 set number
 syntax on
 hi Normal ctermbg=none
