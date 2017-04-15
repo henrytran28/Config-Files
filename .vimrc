@@ -71,6 +71,7 @@ imap jk <Esc>
 " YouCompleteMe
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_python_binary_path = '/usr/bin/python3'
 
 " Vim Airline
 let g:airline#extensions#tabline#enabled = 1
