@@ -14,6 +14,8 @@ Plugin 'scrooloose/nerdTree'
 
 Plugin 'fatih/vim-go'
 
+Plugin 'nsf/gocode', {'rtp': 'vim/'}
+
 Plugin 'junegunn/seoul256.vim'
 
 Plugin 'valloric/youcompleteme'
@@ -75,7 +77,7 @@ let g:ycm_python_binary_path = '/usr/bin/python3'
 
 " Vim Airline
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='bubblegum'
+let g:airline_theme='base16'
 let g:airline_left_sep=''
 let g:airline_right_sep=''
 
@@ -84,3 +86,8 @@ highlight ExtraWhitespace ctermbg=114
 
 " Nerdcommenter
 let NERDSpaceDelims=1
+
+" Golang
+let g:go_fmt_command = "goimports"
+let g:go_auto_sameids = 1
+autocmd FileType go nmap <leader>b  <Plug>(go-build)
