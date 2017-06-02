@@ -49,7 +49,6 @@ filetype plugin indent on    " required
 "Colour
 colo seoul256
 set t_Co=256
-hi Normal ctermbg=none
 
 " Tabbing and indenting set tabstop=4
 set softtabstop=4
@@ -63,6 +62,7 @@ filetype indent on
 set hlsearch
 set number
 syntax on
+hi Normal ctermbg=none
 
 " Useful shortcuts
 let mapleader=","
