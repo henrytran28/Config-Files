@@ -49,6 +49,7 @@ filetype plugin indent on    " required
 "Colour
 colo seoul256
 set t_Co=256
+hi Normal ctermbg=none
 
 " Tabbing and indenting set tabstop=4
 set softtabstop=4
@@ -58,17 +59,18 @@ set autoindent
 set smartindent
 filetype indent on
 
+" Common settings
 set hlsearch
 set number
 syntax on
-hi Normal ctermbg=none
 
 " Useful shortcuts
 let mapleader=","
-map <C-n> :NERDTreeToggle<CR>
 set pastetoggle=<leader>p
+map <C-n> :NERDTreeToggle<CR>
 map <leader>sw :StripWhitespace<CR>
 imap jk <Esc>
+nnoremap <silent> <leader>n :nohlsearch<CR>
 
 " YouCompleteMe
 let g:ycm_autoclose_preview_window_after_completion = 1
@@ -91,3 +93,5 @@ let NERDSpaceDelims=1
 let g:go_fmt_command = "goimports"
 let g:go_auto_sameids = 1
 autocmd FileType go nmap <leader>b  <Plug>(go-build)
+autocmd FileType go nmap <Leader>i <Plug>(go-info)
+autocmd FileType go nmap <Leader>r <Plug>(go-run)
