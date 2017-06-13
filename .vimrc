@@ -92,6 +92,6 @@ let NERDSpaceDelims=1
 " Golang
 let g:go_fmt_command = "goimports"
 let g:go_auto_sameids = 1
-autocmd FileType go nmap <leader>b  <Plug>(go-build)
+autocmd FileType go nmap <leader>b <Plug>(go-build)
 autocmd FileType go nmap <Leader>i <Plug>(go-info)
 autocmd FileType go nmap <Leader>r <Plug>(go-run)

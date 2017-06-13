@@ -31,7 +31,7 @@ alias weather=checkWeather
 alias moon='curl wttr.in/moon'
 
 set -o vi
-screenfetch
+neofetch
 
 # 256 colour terminal
 if [ "$COLORTERM" == "xfce4-terminal" ] ; then
