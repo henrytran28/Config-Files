@@ -9,6 +9,7 @@ install() {
 }
 
 if [[ $# -eq 0 ]]; then
+    echo "Installing basic completion"
     install
     ./install.py
 fi
