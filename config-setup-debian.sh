@@ -58,5 +58,5 @@ fi
 echo "Setting up Neofetch..."
 sudo add-apt-repository ppa:dawidd0811/neofetch-daily
 sudo apt update
-sudo apt -y install neofetch
+sudo apt -y install neofetch w3m-img imagemagick
 cp ./neofetch/config $HOME/.config/neofetch/
