@@ -8,7 +8,7 @@
 PS1='[\u@\h \W]\$ '
 
 #Golang
-export GOPATH=~/go-workspace
+export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
 export EDITOR='vim'
