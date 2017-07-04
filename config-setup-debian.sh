@@ -1,10 +1,6 @@
-# Bash Setup
-cp ./.bashrc $HOME
-source $HOME/.bashrc
-
 # Font Setup
 echo "Installing fonts..."
-cp ./.fonts $HOME
+cp -r ./.fonts $HOME
 fc-cache -fv
 
 # Git Setup
@@ -13,14 +9,15 @@ git --version 2>&1 > /dev/null
 GIT_IS_AVAILABLE=$?
 if ! [[ $GIT_IS_AVAILABLE -eq 0 ]]; then
    sudo apt -y install git
-   cp ./.gitconfig $HOME
 fi
+cp ./.gitconfig $HOME
 
 # Conky Setup
 echo "Setting up conky..."
 sudo apt update
-sudo apt -y install conky
-cp ./conky.conf $HOME
+sudo apt -y install conky-all
+cp ./conky.conf $HOME/.conkyrc
+killall -SIGUSR1 conky
 echo "Please set conky as a start up process"
 
 # Colour Test
@@ -50,6 +47,8 @@ elif [[ $terminal == *"xfce4-terminal"* ]]; then
     git clone https://github.com/atweiden/xfce4-terminal-colors-seoul256
     cd xfce4-terminal-colors-seoul256
     sudo cp seoul256.theme /usr/share/xfce4/terminal/colorschemes
+    cd -
+    rm -rf xfce4-terminal-colors-seoul256
 else
     echo "Terminal not supported for colour scheme"
 fi
@@ -57,6 +56,9 @@ fi
 # Neofetch Setup
 echo "Setting up Neofetch..."
 sudo add-apt-repository ppa:dawidd0811/neofetch-daily
-sudo apt update
 sudo apt -y install neofetch w3m-img imagemagick
 cp ./neofetch/config $HOME/.config/neofetch/
+
+# Bash Setup
+cp ./.bashrc $HOME
+source $HOME/.bashrc

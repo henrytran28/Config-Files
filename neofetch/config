@@ -640,7 +640,7 @@ crop_offset="center"
 # Values:  'auto', '00px', '00%', 'none'
 # Flags:   --image_size
 #          --size
-image_size="45%"
+image_size="auto"
 
 # Ggap between image and text
 #
