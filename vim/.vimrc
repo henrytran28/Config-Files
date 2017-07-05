@@ -92,6 +92,12 @@ highlight ExtraWhitespace ctermbg=114
 " Nerdcommenter
 let NERDSpaceDelims=1
 
+" VimWiki
+let wiki = {}
+let g:vimwikidir = $HOME . "/dropbox/vimwiki"
+let wiki.path = g:vimwikidir
+let g:vimwiki_list=[wiki]
+
 " Golang
 let g:go_fmt_command = "goimports"
 let g:go_auto_sameids = 1
