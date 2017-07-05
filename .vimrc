@@ -78,10 +78,11 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_python_binary_path = '/usr/bin/python3'
 
 " Vim Airline
+set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='base16'
-let g:airline_left_sep=''
-let g:airline_right_sep=''
+" let g:airline_left_sep=''
+" let g:airline_right_sep=''
 
 " Better WhiteSpace
 highlight ExtraWhitespace ctermbg=114
