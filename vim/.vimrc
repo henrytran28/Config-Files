@@ -31,6 +31,8 @@ Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'mileszs/ack.vim'
 
 Plugin 'vimwiki/vimwiki'
+
+Plugin 'tpope/vim-fugitive'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -81,8 +83,8 @@ let g:ycm_python_binary_path = '/usr/bin/python3'
 set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='base16'
-" let g:airline_left_sep=''
-" let g:airline_right_sep=''
+let g:airline_left_sep=''
+let g:airline_right_sep=''
 
 " Better WhiteSpace
 highlight ExtraWhitespace ctermbg=114

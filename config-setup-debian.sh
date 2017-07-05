@@ -2,6 +2,7 @@
 echo "Installing fonts..."
 cp -r ./.fonts $HOME
 fc-cache -fv
+echo
 
 # Git Setup
 echo "Setting up Git..."
@@ -11,6 +12,7 @@ if ! [[ $GIT_IS_AVAILABLE -eq 0 ]]; then
    sudo apt -y install git
 fi
 cp ./.gitconfig $HOME
+echo
 
 # Conky Setup
 echo "Setting up conky..."
@@ -19,6 +21,7 @@ sudo apt -y install conky-all
 cp ./conky/conky_debian.conf $HOME/.conkyrc
 killall -SIGUSR1 conky
 echo "Please set conky as a start up process"
+echo
 
 # Colour Test
 echo "Testing colours..."
@@ -28,14 +31,16 @@ if [ $(dpkg-query -W -f='${Status}' nano 2>/dev/null | grep -c "ok installed") -
 else
     python color.py
 fi
+echo
 
 # Vim Setup
 echo "Setting up Vim..."
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 cp ./vim/.vimrc $HOME
-echo "Please run PluginInstall to install plugins"
+vim +PluginInstall +qall
 echo "Please run GoInstallBinaries if doing go development"
 echo "Please run ycm-setup.sh with the appropriate languages"
+echo
 
 # Theme Setup
 echo "Setting up colour scheme..."
@@ -53,17 +58,22 @@ elif [[ $terminal == *"xfce4-terminal"* ]]; then
 else
     echo "Terminal not supported for colour scheme"
 fi
+echo
 
 # Neofetch Setup
 echo "Setting up Neofetch..."
 sudo add-apt-repository ppa:dawidd0811/neofetch-daily
 sudo apt -y install neofetch w3m-img imagemagick
 cp ./neofetch/config $HOME/.config/neofetch/
+echo
 
 # Bash Setup
 cp ./.bashrc $HOME
 source $HOME/.bashrc
+echo
 
 # Byobu Setup
 sudo apt -y install byobu
 cp ./byobu/status $BYOBU_CONFIG_DIR/
+cp ./byobu/color.tmux $BYOBU_CONFIG_DIR/
+echo
