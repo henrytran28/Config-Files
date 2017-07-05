@@ -564,7 +564,7 @@ image_backend="w3m"
 # NOTE: 'auto' will pick the best image source for whatever image backend is used.
 #       In ascii mode, distro ascii art will be used and in an image mode, your
 #       wallpaper will be used.
-image_source="/home/hetran/config-files/neofetch-images"
+image_source="/home/hetran/config-files/neofetch/images"
 
 
 # Ascii Options

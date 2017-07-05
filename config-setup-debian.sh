@@ -16,7 +16,7 @@ cp ./.gitconfig $HOME
 echo "Setting up conky..."
 sudo apt update
 sudo apt -y install conky-all
-cp ./conky.conf $HOME/.conkyrc
+cp ./conky/conky_debian.conf $HOME/.conkyrc
 killall -SIGUSR1 conky
 echo "Please set conky as a start up process"
 
@@ -32,7 +32,8 @@ fi
 # Vim Setup
 echo "Setting up Vim..."
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-cp ./.vimrc $HOME
+cp ./vim/.vimrc $HOME
+echo "Please run PluginInstall to install plugins"
 echo "Please run GoInstallBinaries if doing go development"
 echo "Please run ycm-setup.sh with the appropriate languages"
 
@@ -62,3 +63,7 @@ cp ./neofetch/config $HOME/.config/neofetch/
 # Bash Setup
 cp ./.bashrc $HOME
 source $HOME/.bashrc
+
+# Byobu Setup
+sudo apt -y install byobu
+cp ./byobu/status $BYOBU_CONFIG_DIR/
