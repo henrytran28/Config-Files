@@ -93,10 +93,7 @@ highlight ExtraWhitespace ctermbg=114
 let NERDSpaceDelims=1
 
 " VimWiki
-let wiki = {}
-let g:vimwikidir = $HOME . "/dropbox/vimwiki"
-let wiki.path = g:vimwikidir
-let g:vimwiki_list=[wiki]
+let g:vimwiki_list = [{'path': '$HOME/Dropbox/notes'}]
 
 " Golang
 let g:go_fmt_command = "goimports"
