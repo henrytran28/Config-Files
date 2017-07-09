@@ -8,8 +8,7 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
+Plugin 'VundleVim/Vundle.vim' 
 Plugin 'scrooloose/nerdTree'
 
 Plugin 'fatih/vim-go'
@@ -69,8 +68,6 @@ hi Normal ctermbg=none
 " Useful shortcuts
 let mapleader=","
 set pastetoggle=<leader>p
-map <C-n> :NERDTreeToggle<CR>
-map <leader>sw :StripWhitespace<CR>
 imap jk <Esc>
 nnoremap <silent> <leader>n :nohlsearch<CR>
 
@@ -88,12 +85,19 @@ let g:airline_right_sep=''
 
 " Better WhiteSpace
 highlight ExtraWhitespace ctermbg=114
+map <leader>sw :StripWhitespace<CR>
 
 " Nerdcommenter
 let NERDSpaceDelims=1
 
+" NERDTree
+map <C-n> :NERDTreeToggle<CR>
+
 " VimWiki
 let g:vimwiki_list = [{'path': '$HOME/Dropbox/notes'}]
+autocmd FileType vimwiki nmap <leader>h :Vimwiki2HTML<CR>
+autocmd FileType vimkwiki nmap <leader>ha :VimwikiAll2HTML<CR>
+autocmd FileType vimkwiki nmap <leader>t :VimwikiTable<CR>
 
 " Golang
 let g:go_fmt_command = "goimports"
