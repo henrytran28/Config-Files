@@ -8,6 +8,7 @@
 PS1='[\u@\h \W]\$ '
 
 #Golang
+export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
