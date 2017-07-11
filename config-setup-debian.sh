@@ -1,3 +1,4 @@
+#!/bin/bash
 # Font Setup
 echo "Installing fonts..."
 cp -r ./.fonts $HOME
@@ -35,6 +36,7 @@ echo
 
 # Vim Setup
 echo "Setting up Vim..."
+sudo apt -y install vim
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 cp ./vim/.vimrc $HOME
 vim +PluginInstall +qall
@@ -45,6 +47,7 @@ echo
 # Theme Setup
 echo "Setting up colour scheme..."
 terminal=$(cat /etc/alternatives/x-terminal-emulator | grep exec)
+echo $terminal
 if [[ $terminal == *"gnome-terminal"* ]]; then
     git clone https://github.com/anuragsoni/seoul256-gnome-terminal.git \
         $HOME/.config/seoul256-gnome-terminal

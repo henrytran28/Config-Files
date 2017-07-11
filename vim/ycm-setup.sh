@@ -14,7 +14,7 @@ if [[ $# -eq 0 ]]; then
     ./install.py
 fi
 
-while [[ $# -gt 1 ]]
+while [[ $# -gt 0 ]]
 do
     case "$1" in
         -h|--help)
