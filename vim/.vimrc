@@ -8,7 +8,7 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim' 
+Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdTree'
 
 Plugin 'fatih/vim-go'
@@ -94,10 +94,11 @@ let NERDSpaceDelims=1
 map <C-n> :NERDTreeToggle<CR>
 
 " VimWiki
-let g:vimwiki_list = [{'path': '$HOME/Dropbox/notes'}]
+let g:vimwiki_list = [{'path': '$HOME/Dropbox/notes',
+            \'syntax': 'markdown', 'ext': '.md'}]
 autocmd FileType vimwiki nmap <leader>h :Vimwiki2HTML<CR>
-autocmd FileType vimkwiki nmap <leader>ha :VimwikiAll2HTML<CR>
-autocmd FileType vimkwiki nmap <leader>t :VimwikiTable<CR>
+autocmd FileType vimwiki nmap <leader>ha :VimwikiAll2HTML<CR>
+autocmd FileType vimwiki nmap <leader>t :VimwikiTable<CR>
 
 " Golang
 let g:go_fmt_command = "goimports"
