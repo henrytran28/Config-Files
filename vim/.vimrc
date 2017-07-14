@@ -32,6 +32,9 @@ Plugin 'mileszs/ack.vim'
 Plugin 'vimwiki/vimwiki'
 
 Plugin 'tpope/vim-fugitive'
+
+Plugin 'vim-syntastic/syntastic'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -108,3 +111,13 @@ let g:go_metalinter_autosave = 1
 autocmd FileType go nmap <leader>b <Plug>(go-build)
 autocmd FileType go nmap <Leader>i <Plug>(go-info)
 autocmd FileType go nmap <Leader>r <Plug>(go-run)
+
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_check_on_open = 1
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_wq = 0
+let g:syntastic_go_checkers = ['go', 'gofmt']
