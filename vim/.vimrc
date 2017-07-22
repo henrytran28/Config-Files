@@ -97,8 +97,7 @@ let NERDSpaceDelims=1
 map <C-n> :NERDTreeToggle<CR>
 
 " VimWiki
-let g:vimwiki_list = [{'path': '$HOME/Dropbox/notes',
-            \'syntax': 'markdown', 'ext': '.md'}]
+let g:vimwiki_list = [{'path': '$HOME/Dropbox/Notes'}]
 autocmd FileType vimwiki nmap <leader>h :Vimwiki2HTML<CR>
 autocmd FileType vimwiki nmap <leader>ha :VimwikiAll2HTML<CR>
 autocmd FileType vimwiki nmap <leader>t :VimwikiTable<CR>
@@ -121,3 +120,9 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_wq = 0
 let g:syntastic_go_checkers = ['go', 'gofmt']
+let g:syntastic_python_checkers = ['flake8']
+
+let g:syntastic_error_symbol = "♘"
+let g:syntastic_style_error_symbol = "♞"
+let g:syntastic_warning_symbol = "♗"
+let g:syntastic_style_warning_symbol = "♝"
