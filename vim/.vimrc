@@ -106,8 +106,6 @@ autocmd FileType vimwiki nmap <leader>t :VimwikiTable<CR>
 " Golang
 let g:go_fmt_command = "goimports"
 let g:go_auto_sameids = 1
-let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck']
-let g:go_metalinter_autosave = 1
 autocmd FileType go nmap <leader>b <Plug>(go-build)
 autocmd FileType go nmap <Leader>i <Plug>(go-info)
 autocmd FileType go nmap <Leader>r <Plug>(go-run)
@@ -120,4 +118,4 @@ set statusline+=%*
 let g:syntastic_check_on_open = 1
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_wq = 0
-let g:syntastic_go_checkers = ['go', 'gofmt']
+let g:syntastic_go_checkers = ['go', 'gofmt', 'gometalinter']
