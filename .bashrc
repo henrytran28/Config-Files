@@ -14,6 +14,9 @@ export PATH=$PATH:$GOPATH/bin
 
 export EDITOR='vim'
 
+# Python
+export PATH="/usr/bin/python3/bin:$PATH"
+
 # Make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
