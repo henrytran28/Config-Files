@@ -31,6 +31,7 @@ checkWeather() {
 alias ls='ls --color=auto'
 alias la='ls -A --color=auto'
 alias ll='ls -alF'
+alias python='python3'
 
 alias grep='grep --color=auto'
 
@@ -38,6 +39,8 @@ alias weather=checkWeather
 alias moon='curl wttr.in/moon'
 
 set -o vi
+bind -m vi-insert "\C-l":clear-screen
+
 neofetch
 
 # 256 colour terminal for xfce4
