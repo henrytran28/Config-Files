@@ -9,6 +9,7 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+
 Plugin 'scrooloose/nerdTree'
 
 Plugin 'fatih/vim-go'
@@ -34,6 +35,8 @@ Plugin 'vimwiki/vimwiki'
 Plugin 'tpope/vim-fugitive'
 
 Plugin 'vim-syntastic/syntastic'
+
+Plugin 'tpope/vim-surround.git'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -77,7 +80,7 @@ nnoremap <silent> <leader>n :nohlsearch<CR>
 " YouCompleteMe
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
-let g:ycm_python_binary_path = '/usr/bin/python3'
+let g:ycm_server_python_interpreter = '/usr/bin/python3'
 
 " Vim Airline
 set laststatus=2
@@ -117,5 +120,4 @@ set statusline+=%*
 let g:syntastic_check_on_open = 1
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_wq = 0
-let g:syntastic_go_checkers = ['go', 'gofmt', 'gometalinter']
 let g:syntastic_python_checkers = ['flake8']
