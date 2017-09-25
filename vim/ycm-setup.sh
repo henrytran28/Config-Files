@@ -11,7 +11,7 @@ install() {
 if [[ $# -eq 0 ]]; then
     echo "Installing basic completion"
     install
-    ./install.py
+    python3 install.py
 fi
 
 while [[ $# -gt 0 ]]
