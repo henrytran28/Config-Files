@@ -63,7 +63,7 @@ set expandtab
 set shiftwidth=4
 set autoindent
 set smartindent
-filetype indent on
+autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2
 
 " Common settings
 set hlsearch
@@ -121,3 +121,4 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_wq = 0
 let g:syntastic_python_checkers = ['flake8']
+let g:syntastic_ruby_checkers = ['rubocop']

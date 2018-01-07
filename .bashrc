@@ -16,6 +16,11 @@ export EDITOR='vim'
 
 # Python
 export PATH="/usr/bin/python3/bin:$PATH"
+export PYTHONPATH="$PYTHONPATH:/home/hetran/python-tetris"
+
+# Ruby
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
 
 # Make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
