@@ -57,13 +57,17 @@ filetype plugin indent on    " required
 colo seoul256
 set t_Co=256
 
-" Tabbing and indenting set tabstop=4
+" Tabbing and indenting
+set tabstop=4
 set softtabstop=4
 set expandtab
 set shiftwidth=4
 set autoindent
 set smartindent
-filetype indent on
+autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2
+autocmd FileType eruby setlocal expandtab shiftwidth=2 tabstop=2
+autocmd FileType css setlocal expandtab shiftwidth=2 tabstop=2
+autocmd FileType scss setlocal expandtab shiftwidth=2 tabstop=2
 
 " Common settings
 set hlsearch
@@ -80,7 +84,7 @@ nnoremap <silent> <leader>n :nohlsearch<CR>
 " YouCompleteMe
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
-let g:ycm_server_python_interpreter = '/usr/bin/python3'
+let g:ycm_python_binary_path = '/usr/bin/python3'
 
 " Vim Airline
 set laststatus=2
@@ -121,3 +125,4 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_wq = 0
 let g:syntastic_python_checkers = ['flake8']
+let g:syntastic_ruby_checkers = ['rubocop']
