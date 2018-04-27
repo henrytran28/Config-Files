@@ -38,6 +38,8 @@ Plugin 'vim-syntastic/syntastic'
 
 Plugin 'tpope/vim-surround.git'
 
+Plugin 'leafgarland/typescript-vim.git'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -70,7 +72,6 @@ autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2
 autocmd FileType eruby setlocal expandtab shiftwidth=2 tabstop=2
 autocmd FileType css setlocal expandtab shiftwidth=2 tabstop=2
 autocmd FileType scss setlocal expandtab shiftwidth=2 tabstop=2
-autocmd FileType ts setlocal expandtab shiftwidth=2 tabstop=2
 
 " Common settings
 set hlsearch
