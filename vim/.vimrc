@@ -54,8 +54,9 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 "Colour
-colo seoul256
 set t_Co=256
+let g:seoul256_srgb = 1
+colo seoul256
 
 " Tabbing and indenting
 set tabstop=4
@@ -64,10 +65,12 @@ set expandtab
 set shiftwidth=4
 set autoindent
 set smartindent
+
 autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2
 autocmd FileType eruby setlocal expandtab shiftwidth=2 tabstop=2
 autocmd FileType css setlocal expandtab shiftwidth=2 tabstop=2
 autocmd FileType scss setlocal expandtab shiftwidth=2 tabstop=2
+autocmd FileType ts setlocal expandtab shiftwidth=2 tabstop=2
 
 " Common settings
 set hlsearch
