@@ -57,7 +57,8 @@ filetype plugin indent on    " required
 colo seoul256
 set t_Co=256
 
-" Tabbing and indenting set tabstop=4
+" Tabbing and indenting
+set tabstop=4
 set softtabstop=4
 set expandtab
 set shiftwidth=4
