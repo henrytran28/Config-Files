@@ -72,6 +72,9 @@ autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2
 autocmd FileType eruby setlocal expandtab shiftwidth=2 tabstop=2
 autocmd FileType css setlocal expandtab shiftwidth=2 tabstop=2
 autocmd FileType scss setlocal expandtab shiftwidth=2 tabstop=2
+autocmd FileType html setlocal expandtab shiftwidth=2 tabstop=2
+autocmd FileType xml setlocal expandtab shiftwidth=2 tabstop=2
+autocmd FileType typescript setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 
 " Common settings
 set hlsearch
