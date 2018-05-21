@@ -656,7 +656,7 @@ gap=3
 # Values:  'px'
 # Flags:   --xoffset
 #          --yoffset
-yoffset=0
+yoffset=25
 xoffset=0
 
 # Image background color
