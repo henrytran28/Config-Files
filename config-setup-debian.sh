@@ -77,6 +77,6 @@ echo
 
 # Byobu Setup
 sudo apt -y install byobu
-cp ./byobu/status $BYOBU_CONFIG_DIR/
-cp ./byobu/color.tmux $BYOBU_CONFIG_DIR/
+cp ./.byobu/status $BYOBU_CONFIG_DIR/
+cp ./.byobu/color.tmux $BYOBU_CONFIG_DIR/
 echo
