@@ -2,7 +2,7 @@
 # Font Setup
 echo "Installing fonts..."
 cp -r ./.fonts $HOME
-fc-cache -fv
+sudo fc-cache -fv
 echo
 
 # Git Setup

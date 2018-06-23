@@ -28,8 +28,6 @@ Plugin 'vim-airline/vim-airline-themes'
 
 Plugin 'ntpeters/vim-better-whitespace'
 
-Plugin 'mileszs/ack.vim'
-
 Plugin 'vimwiki/vimwiki'
 
 Plugin 'tpope/vim-fugitive'
@@ -54,6 +52,8 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+
+set rtp+=~/.fzf
 
 "Colour
 set t_Co=256
@@ -133,3 +133,5 @@ let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_wq = 0
 let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_ruby_checkers = ['rubocop']
+
+let g:EclimCompletionMethod = 'omnifunc'
