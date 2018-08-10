@@ -138,8 +138,6 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_ruby_checkers = ['rubocop']
 
-let g:EclimCompletionMethod = 'omnifunc'
-
 " Ripgrep
 if executable("rg")
     set grepprg=rg\ --vimgrep\ --no-heading
