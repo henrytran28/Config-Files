@@ -91,6 +91,7 @@ let mapleader=","
 set pastetoggle=<leader>p
 imap jk <Esc>
 nnoremap <silent> <leader>n :nohlsearch<CR>
+vmap <silent> <leader>s :sort<CR>
 
 " YouCompleteMe
 let g:ycm_autoclose_preview_window_after_completion = 1
