@@ -1,8 +1,5 @@
 #
-# ~/.bashrc
-#
-
-# If not running interactively, don't do anything
+# ~/.bashrc # # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
 PS1='[\u@\h \W]\$ '
@@ -13,6 +10,7 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
 export EDITOR='vim'
+export ECLIPSE_HOME=/opt/eclipse
 
 # Python
 export PATH="/usr/bin/python3/bin:$PATH"
@@ -41,6 +39,7 @@ alias la='ls -A --color=auto'
 alias ll='ls -alF'
 alias python='python3'
 alias eclimd='/opt/eclipse/eclimd &'
+alias lua='lua5.3'
 
 alias grep='grep --color=auto'
 
