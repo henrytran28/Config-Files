@@ -41,6 +41,8 @@ Plugin 'leafgarland/typescript-vim.git'
 
 Plugin 'junegunn/fzf.vim'
 
+Plugin 'junegunn/vim-easy-align'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -77,7 +79,7 @@ autocmd FileType css setlocal expandtab shiftwidth=2 tabstop=2 sts=2
 autocmd FileType scss setlocal expandtab shiftwidth=2 tabstop=2 sts=2
 autocmd FileType html setlocal expandtab shiftwidth=2 tabstop=2 sts=2
 autocmd FileType xml setlocal expandtab shiftwidth=2 tabstop=2 sts=2
-autocmd FileType lua setlocal expandtab shiftwidth=2 tabstop=2 sts=2
+autocmd FileType lua setlocal expandtab shiftwidth=4 tabstop=4 sts=4
 autocmd FileType typescript setlocal expandtab shiftwidth=2 tabstop=2 sts=2
 
 " Common settings
@@ -166,3 +168,9 @@ command! -bang -nargs=* F call fzf#vim#grep('
             \ rg --column --line-number --no-heading --fixed-strings
             \ --ignore-case --no-ignore --hidden --follow
             \ --glob "!.git/*" --color "always" '.shellescape(<q-args>).'| tr -d "\017"', 1, <bang>0)
+
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
