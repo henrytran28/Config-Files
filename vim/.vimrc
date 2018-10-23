@@ -1,64 +1,45 @@
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 set nocompatible              " be iMproved, required
-filetype off                  " required
+call plug#begin('~/.vim/plugged')
 
-" set the runtime path to include Vundle and initialize
-" TODO: Change vundle to vim-plug
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+Plug 'scrooloose/nerdTree'
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 
-Plugin 'scrooloose/nerdTree'
+Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
 
-Plugin 'fatih/vim-go'
+Plug 'junegunn/seoul256.vim'
 
-Plugin 'nsf/gocode', {'rtp': 'vim/'}
+Plug 'valloric/youcompleteme', { 'do': './install.py' }
 
-Plugin 'junegunn/seoul256.vim'
+Plug 'scrooloose/nerdcommenter'
 
-Plugin 'valloric/youcompleteme'
+Plug 'bling/vim-airline'
 
-Plugin 'scrooloose/nerdcommenter'
+Plug 'vim-airline/vim-airline-themes'
 
-Plugin 'bling/vim-airline'
+Plug 'ntpeters/vim-better-whitespace'
 
-Plugin 'vim-airline/vim-airline-themes'
+Plug 'vimwiki/vimwiki'
 
-Plugin 'ntpeters/vim-better-whitespace'
+Plug 'tpope/vim-fugitive'
 
-Plugin 'vimwiki/vimwiki'
+Plug 'vim-syntastic/syntastic'
 
-Plugin 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
 
-Plugin 'vim-syntastic/syntastic'
+Plug 'leafgarland/typescript-vim'
 
-Plugin 'tpope/vim-surround.git'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
-Plugin 'leafgarland/typescript-vim.git'
+Plug 'junegunn/vim-easy-align'
 
-Plugin 'junegunn/fzf.vim'
-
-Plugin 'junegunn/vim-easy-align'
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
-
-set rtp+=~/.fzf
+call plug#end()
 
 "Colour
 set t_Co=256
@@ -85,7 +66,6 @@ autocmd FileType typescript setlocal expandtab shiftwidth=2 tabstop=2 sts=2
 " Common settings
 set hlsearch
 set number
-syntax on
 hi Normal ctermbg=none
 
 " Useful shortcuts
