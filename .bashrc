@@ -38,7 +38,6 @@ alias ls='ls --color=auto'
 alias la='ls -A --color=auto'
 alias ll='ls -alF'
 alias python='python3'
-alias eclimd='/opt/eclipse/eclimd &'
 alias lua='lua5.3'
 
 alias grep='grep --color=auto'

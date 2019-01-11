@@ -11,7 +11,7 @@ Plug 'scrooloose/nerdTree'
 
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 
-Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
+Plug 'mdempsky/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
 
 Plug 'junegunn/seoul256.vim'
 
@@ -64,6 +64,11 @@ autocmd FileType html setlocal expandtab shiftwidth=2 tabstop=2 sts=2
 autocmd FileType xml setlocal expandtab shiftwidth=2 tabstop=2 sts=2
 autocmd FileType lua setlocal expandtab shiftwidth=4 tabstop=4 sts=4
 autocmd FileType typescript setlocal expandtab shiftwidth=2 tabstop=2 sts=2
+
+" Auto-expansion
+inoremap (; (<CR>)<C-c>O
+inoremap {; {<CR>}<C-c>O
+inoremap [; [<CR>]<C-c>O
 
 " Common settings
 set hlsearch
