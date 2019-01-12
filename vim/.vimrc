@@ -66,9 +66,7 @@ autocmd FileType lua setlocal expandtab shiftwidth=4 tabstop=4 sts=4
 autocmd FileType typescript setlocal expandtab shiftwidth=2 tabstop=2 sts=2
 
 " Auto-expansion
-inoremap (; (<CR>)<C-c>O
-inoremap {; {<CR>}<C-c>O
-inoremap [; [<CR>]<C-c>O
+inoremap {<CR> {<CR>}<ESC>O
 
 " Common settings
 set hlsearch
