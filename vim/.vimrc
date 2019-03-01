@@ -159,3 +159,6 @@ xmap ga <Plug>(EasyAlign)
 
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
+
+" Skeletons
+au BufNewFile *.html 0r ~/.vim/html.skel | let IndentStyle = "html"
