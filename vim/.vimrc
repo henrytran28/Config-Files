@@ -41,6 +41,10 @@ Plug 'junegunn/fzf.vim'
 
 Plug 'junegunn/vim-easy-align'
 
+Plug 'pangloss/vim-javascript'
+
+Plug 'mattn/emmet-vim'
+
 call plug#end()
 
 "Colour
@@ -49,6 +53,7 @@ let g:seoul256_srgb = 1
 colo seoul256
 
 " Tabbing and indenting
+filetype plugin indent on
 set tabstop=4
 set softtabstop=4
 set expandtab
@@ -64,6 +69,7 @@ autocmd FileType html setlocal expandtab shiftwidth=2 tabstop=2 sts=2
 autocmd FileType xml setlocal expandtab shiftwidth=2 tabstop=2 sts=2
 autocmd FileType lua setlocal expandtab shiftwidth=4 tabstop=4 sts=4
 autocmd FileType typescript setlocal expandtab shiftwidth=2 tabstop=2 sts=2
+autocmd FileType javascript setlocal expandtab shiftwidth=2 tabstop=2 sts=2
 
 " Auto-expansion
 inoremap {<CR> {<CR>}<ESC>O
@@ -160,5 +166,6 @@ xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
 
-" Skeletons
-au BufNewFile *.html 0r ~/.vim/html.skel | let IndentStyle = "html"
+" Javascript
+let g:javascript_plugin_jsdoc = 1
+let g:javascript_plugin_flow = 1
