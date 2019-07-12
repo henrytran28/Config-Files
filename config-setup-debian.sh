@@ -2,6 +2,8 @@
 # Font Setup
 echo "Installing fonts..."
 cp -r ./.fonts $HOME
+sudo rm /etc/fonts/conf.d/70-no-bitmaps.conf
+sudo ln -s /etc/fonts/conf.avail/70-yes-bitmaps.conf /etc/fonts/conf.d/70-yes-bitmaps.conf
 sudo fc-cache -fv
 echo
 
@@ -37,9 +39,8 @@ echo
 # Vim Setup
 echo "Setting up Vim..."
 sudo apt -y install vim
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 cp ./vim/.vimrc $HOME
-vim +PluginInstall +qall
+./vim/config-setup-debian.sh
 echo "Please run GoInstallBinaries if doing go development"
 echo "Please run ycm-setup.sh with the appropriate languages"
 echo
