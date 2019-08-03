@@ -83,7 +83,7 @@ hi Normal ctermbg=none
 let mapleader=","
 set pastetoggle=<leader>p
 imap jk <Esc>
-nnoremap <silent> <leader>n :nohlsearch<CR>
+nnoremap <silent> <leader>h :nohlsearch<CR>
 vmap <silent> <leader>s :sort<CR>
 
 map <leader>n :bn<cr>
