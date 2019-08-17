@@ -158,6 +158,7 @@ inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'left': '15%'})
 
 nnoremap <silent> <leader><space> :Files<CR>
 nnoremap <silent> <leader>a :Buffers<CR>
+nnoremap <silent> <leader>rg :F <C-R><C-W><CR>
 
 command! -bang -nargs=* F call fzf#vim#grep('
             \ rg --column --line-number --no-heading --fixed-strings
