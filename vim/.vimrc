@@ -88,7 +88,7 @@ vmap <silent> <leader>s :sort<CR>
 
 map <leader>n :bn<cr>
 map <leader>p :bp<cr>
-map <leader>d :bd<cr>
+map <leader>d :bp\|bd #<cr>
 
 " YouCompleteMe
 let g:ycm_autoclose_preview_window_after_completion = 1
