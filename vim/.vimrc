@@ -29,7 +29,7 @@ Plug 'vimwiki/vimwiki'
 
 Plug 'tpope/vim-fugitive'
 
-Plug 'vim-syntastic/syntastic'
+Plug 'dense-analysis/ale'
 
 Plug 'tpope/vim-surround'
 
@@ -125,16 +125,15 @@ autocmd FileType go nmap <leader>b <Plug>(go-build)
 autocmd FileType go nmap <Leader>i <Plug>(go-info)
 autocmd FileType go nmap <Leader>r <Plug>(go-run)
 
-" Syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+" Ale
+let g:airline#extensions#ale#enabled = 1
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
+let g:ale_fixers = {
+\   'javascript': ['prettier', 'eslint']
+\}
+let g:ale_fix_on_save = 1
 
-let g:syntastic_check_on_open = 1
-let g:syntastic_auto_loc_list = 0
-let g:syntastic_check_on_wq = 0
-let g:syntastic_python_checkers = ['flake8']
-let g:syntastic_ruby_checkers = ['rubocop']
 
 " Ripgrep
 if executable("rg")
