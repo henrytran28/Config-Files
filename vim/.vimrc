@@ -94,6 +94,9 @@ map <leader>d :bp\|bd #<cr>
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_python_binary_path = '/usr/bin/python3'
+nnoremap <leader>gd :YcmCompleter GoToDefinition<CR>
+nnoremap <leader>gl :YcmCompleter GoToDeclaration<CR>
+nnoremap <leader>gr :YcmCompleter GoToReferences<CR>
 
 " Vim Airline
 set laststatus=2
