@@ -81,7 +81,7 @@ hi Normal ctermbg=none
 
 " Useful shortcuts
 let mapleader=","
-set pastetoggle=<leader>p
+set pastetoggle=<leader>v
 imap jk <Esc>
 nnoremap <silent> <leader>h :nohlsearch<CR>
 vmap <silent> <leader>s :sort<CR>
