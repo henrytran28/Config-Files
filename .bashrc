@@ -10,7 +10,6 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
 export EDITOR='vim'
-export ECLIPSE_HOME=/opt/eclipse
 
 # Python
 export PATH="/usr/bin/python3/bin:$PATH"
