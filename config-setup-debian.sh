@@ -51,7 +51,7 @@ echo "Setting up colour scheme..."
 terminal=$(cat /etc/alternatives/x-terminal-emulator | grep ^exec);
 echo $terminal
 if [[ $terminal == *"gnome-terminal"* ]]; then
-    rm -rf $HOME/.config/seoul256-gnome-terminal
+    sudo rm -rf $HOME/.config/seoul256-gnome-terminal
     git clone https://github.com/anuragsoni/seoul256-gnome-terminal.git \
         $HOME/.config/seoul256-gnome-terminal
     source $HOME/.config/seoul256-gnome-terminal/seoul256-dark.sh
