@@ -95,7 +95,7 @@ nnoremap <leader>gd :YcmCompleter GoToDefinition<CR>
 nnoremap <leader>gl :YcmCompleter GoToDeclaration<CR>
 nnoremap <leader>gr :YcmCompleter GoToReferences<CR>
 nnoremap <leader>rr :YcmCompleter RefactorRename<Space>
-nnoremap <leader>D <plug>(YCMHover)
+nmap <leader>D <plug>(YCMHover)
 
 " Vim Airline
 set laststatus=2
