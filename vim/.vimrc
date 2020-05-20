@@ -6,7 +6,6 @@ endif
 
 set nocompatible              " be iMproved, required
 call plug#begin('~/.vim/plugged')
-
 Plug 'scrooloose/nerdTree'
 
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
@@ -33,15 +32,11 @@ Plug 'dense-analysis/ale'
 
 Plug 'tpope/vim-surround'
 
-Plug 'leafgarland/typescript-vim'
-
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 Plug 'junegunn/fzf.vim'
 
 Plug 'junegunn/vim-easy-align'
-
-Plug 'pangloss/vim-javascript'
 
 Plug 'mattn/emmet-vim'
 
@@ -69,9 +64,9 @@ autocmd FileType html setlocal expandtab shiftwidth=2 tabstop=2 sts=2
 autocmd FileType xml setlocal expandtab shiftwidth=2 tabstop=2 sts=2
 autocmd FileType lua setlocal expandtab shiftwidth=4 tabstop=4 sts=4
 autocmd FileType typescript setlocal expandtab shiftwidth=2 tabstop=2 sts=2
+autocmd FileType typescriptreact setlocal expandtab shiftwidth=2 tabstop=2 sts=2
 autocmd FileType javascript setlocal expandtab shiftwidth=2 tabstop=2 sts=2
-
-autocmd BufEnter *.tsx :setlocal filetype=typescript
+autocmd FileType javascriptreact setlocal expandtab shiftwidth=2 tabstop=2 sts=2
 
 " Auto-expansion
 inoremap {<CR> {<CR>}<ESC>O
@@ -88,9 +83,9 @@ imap jk <Esc>
 nnoremap <silent> <leader>h :nohlsearch<CR>
 vmap <silent> <leader>s :sort<CR>
 
-map <leader>n :bn<cr>
-map <leader>p :bp<cr>
-map <leader>d :bp\|bd #<cr>
+map <leader>bn :bn<cr>
+map <leader>bp :bp<cr>
+map <leader>bd :bp\|bd #<cr>
 
 " YouCompleteMe
 let g:ycm_autoclose_preview_window_after_completion = 1
@@ -99,6 +94,8 @@ let g:ycm_python_binary_path = '/usr/bin/python3'
 nnoremap <leader>gd :YcmCompleter GoToDefinition<CR>
 nnoremap <leader>gl :YcmCompleter GoToDeclaration<CR>
 nnoremap <leader>gr :YcmCompleter GoToReferences<CR>
+nnoremap <leader>rr :YcmCompleter RefactorRename<Space>
+nnoremap <leader>D <plug>(YCMHover)
 
 " Vim Airline
 set laststatus=2
@@ -135,7 +132,9 @@ let g:airline#extensions#ale#enabled = 1
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 let g:ale_fixers = {
-\   'javascript': ['prettier', 'eslint']
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'javascript': ['prettier', 'eslint'],
+\   'typescriptreact': ['prettier', 'eslint']
 \}
 let g:ale_fix_on_save = 1
 
@@ -170,7 +169,3 @@ xmap ga <Plug>(EasyAlign)
 
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
-
-" Javascript
-let g:javascript_plugin_jsdoc = 1
-let g:javascript_plugin_flow = 1
