@@ -1,6 +1,9 @@
 #
 # ~/.bashrc # # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+      tmux attach || exec tmux
+fi
 
 PS1='[\u@\h \W]\$ '
 

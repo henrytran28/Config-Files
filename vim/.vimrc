@@ -71,6 +71,8 @@ autocmd FileType lua setlocal expandtab shiftwidth=4 tabstop=4 sts=4
 autocmd FileType typescript setlocal expandtab shiftwidth=2 tabstop=2 sts=2
 autocmd FileType javascript setlocal expandtab shiftwidth=2 tabstop=2 sts=2
 
+autocmd BufEnter *.tsx :setlocal filetype=typescript
+
 " Auto-expansion
 inoremap {<CR> {<CR>}<ESC>O
 
@@ -137,7 +139,6 @@ let g:ale_fixers = {
 \}
 let g:ale_fix_on_save = 1
 
-
 " Ripgrep
 if executable("rg")
     set grepprg=rg\ --vimgrep\ --no-heading
@@ -154,9 +155,6 @@ imap <c-x><c-k> <plug>(fzf-complete-word)
 imap <c-x><c-f> <plug>(fzf-complete-path)
 imap <c-x><c-j> <plug>(fzf-complete-file-ag)
 imap <c-x><c-l> <plug>(fzf-complete-line)
-
-" Advanced customization using autoload functions
-inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'left': '15%'})
 
 nnoremap <silent> <leader><space> :Files<CR>
 nnoremap <silent> <leader>a :Buffers<CR>
