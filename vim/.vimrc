@@ -157,12 +157,7 @@ imap <c-x><c-l> <plug>(fzf-complete-line)
 
 nnoremap <silent> <leader><space> :Files<CR>
 nnoremap <silent> <leader>a :Buffers<CR>
-nnoremap <silent> <leader>rg :F <C-R><C-W><CR>
-
-command! -bang -nargs=* F call fzf#vim#grep('
-            \ rg --column --line-number --no-heading --fixed-strings
-            \ --ignore-case --no-ignore --hidden --follow
-            \ --glob "!.git/*" --color "always" '.shellescape(<q-args>).'| tr -d "\017"', 1, <bang>0)
+nnoremap <silent> <leader>rg :Rg <C-R><C-W><CR>
 
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
